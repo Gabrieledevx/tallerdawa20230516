@@ -33,7 +33,7 @@ export class PersonaComponent {
     // Resto del código para procesar la lista de personas
   }
 
-  eliminaPersona(indice:number): void{
+  eliminarPersona(indice:number): void{
     this.listPersona.splice(indice,1);
 
   }

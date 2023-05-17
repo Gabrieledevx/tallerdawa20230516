@@ -30,8 +30,8 @@
         </div>
 
         <div class="col-md-6" style="padding: 10px;">
-            <button type="button" class="btn btn-primary btn-full-width">
-                 Agregar <i class="bi bi-person-plus" (click)="agregarPersona()"> </i>
+            <button type="button" class="btn btn-primary btn-full-width" (click)="agregarPersona()">
+                 Agregar <i class="bi bi-person-plus" > </i>
             </button>
         </div>
 
@@ -56,9 +56,9 @@
                     <td>{{persona.cedula}}</td>
                     <td>{{persona.nombre}}</td>
                     <td>{{persona.apellido}}</td>
-                    <td>{{persona.fechaNacimiento}}</td>
+                    <td>{{ persona.fechaNacimiento | date:'dd/MM/yyyy' }}</td>
                     <td>
-                        <span>
+                        <span class="cursor text-danger" (click)="eliminarPersona(i)">
                             <i class="bi bi-trash-fill"></i>
                         </span>
                     </td>
